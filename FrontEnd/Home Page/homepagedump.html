@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homepagedump.css">
+</head>
+
+<body>
+    <button class="signUpButton">Sign Up</button>
+
+    <div class="searchFlight">
+        <div class="firstRow">
+            <label for="preferredAirline">PREFERRED AIRLINE:</label>
+            <select type="text" id="preferredAirline">
+                <option value="" disabled selected></option>
+                <option>Airline 1</option>
+                <option>Airline 2</option>
+            </select>
+            
+            <label for="travelType">TRAVEL TYPE: </label>
+            <select type="text" id="travelType">
+                <option value="" disabled selected></option>
+                <option>One-way</option>
+                <option>Round Trip</option>
+            </select>
+
+            <label for="numberOfPassengers">NO. OF PASSENGERS: </label>
+            <input type="number" id="numberOfPassengers">
+        </div>
+
+        <div class="secondRow">
+            <label for="placeOfOrigin">PLACE OF ORIGIN: </label>
+            <select type="text" id="placeOfOrigin">
+                <option value="" disabled selected>Country/City</option>
+                <option>Place of Origin 1</option>
+                <option>Place of Origin 2</option>
+            </select>
+            
+            <label for="placeOfDestination">PLACE OF DESTINATION: </label>
+            <select type="text" id="placeOfDestination">
+                <option value="" disabled selected>Country/City</option>
+                <option>Place of Destination 1</option>
+                <option>Place of Destination 2</option>
+            </select>
+
+            <label for="dateOfDeparture">DATE OF DEPARTURE: </label>
+            <input type="date" id="dateOfDeparture">
+
+            <label for="dateOfReturn">DATE OF RETURN: </label>
+            <input type="date" id="dateOfReturn">
+        </div>      
+
+        <div class="thirdRow">
+            <label for="filterBy">FILTER BY</label>
+            <select type="text" id="filterBy">
+                <option value="" disabled selected></option>
+                <option>Filter By 1</option>
+                <option>Filter By 2</option>
+            </select>
+            
+            <button class="submitButton">Submit</button>
+        </div>      
+    </div>
+</body>
+
+</html>
