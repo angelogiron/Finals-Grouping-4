@@ -2,20 +2,20 @@ package com.it1311l.uap.oneflightapp.model;
 
 public class Account 
 {
-	private int accountId;
+	private long accountId;
 	private String accountName;
 	private String accountBirthday;
-	private int accountPhoneNumber;
-	private int accountPassportDetails;
+	private long accountPhoneNumber;
+	private long accountPassportDetails;
 	private String accountEmail;
 	private String accountPassword;
 	
-	public int getAccountId() 
+	public long getAccountId() 
 	{
 		return accountId;
 	}
 	
-	public void setAccountId(int accountId) 
+	public void setAccountId(long accountId) 
 	{
 		this.accountId = accountId;
 	}
@@ -40,21 +40,21 @@ public class Account
 		this.accountBirthday = accountBirthday;
 	}
 	
-	public int getAccountPhoneNumebr() 
+	public long getAccountPhoneNumebr() 
 	{
 		return accountPhoneNumber;
 	}
 	
-	public void setAccountPhoneNumebr(int accountPhoneNumebr) 
+	public void setAccountPhoneNumebr(long accountPhoneNumebr) 
 	{
 		this.accountPhoneNumber = accountPhoneNumebr;
 	}
-	public int getAccountPasswordDetails() 
+	public long getAccountPasswordDetails() 
 	{
 		return accountPassportDetails;
 	}
 	
-	public void setAccountPasswordDetails(int accountPasswordDetails) 
+	public void setAccountPasswordDetails(long accountPasswordDetails) 
 	{
 		this.accountPassportDetails = accountPasswordDetails;
 	}
