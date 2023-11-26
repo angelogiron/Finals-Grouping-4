@@ -2,11 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(135deg, #FFFFFF 10%, #4CAF50 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px;
+    
 }
 
 .menu {
-    background-color: #333;
+    background-color: #000000;
     overflow: hidden;
 }
 
@@ -18,6 +22,7 @@ body {
 
 .menu li {
     float: left;
+    background-color: #000000;
 }
 
 .menu a {
@@ -28,23 +33,19 @@ body {
     text-decoration: none;
 }
 
-.menu a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 .menu a.active {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .search-container {
@@ -83,9 +84,19 @@ body {
     margin-top: 10px;
 }
 
-.activate-button, .deactivate-button {
+ .deactivate-button {
     padding: 10px;
-    background-color: #3498db;
+    background-color: #db5e34;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.activate-button {
+    padding: 10px;
+    background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -99,3 +110,4 @@ body {
     text-decoration: none;
     padding: 14px 16px;
 }
+
