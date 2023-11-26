@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface AccountsRepository 
 {
-	@Insert("INSERT INTO accounts(accountId, accountName, accountBirthday, accountPhoneNumber, accountPassportDetails, accountEmail, accountPassword) VALUES (#{accountId}, #{accountName}, #{accountBirthday}, #{accountPhoneNumber}, #{accountPassportDetails}, #{accountEmail}, #{accountPassword})")
+	@Insert("INSERT INTO accounts(accountName, accountBirthday, accountPhoneNumber, accountPassportDetails, accountEmail, accountPassword) VALUES (#{accountName}, #{accountBirthday}, #{accountPhoneNumber}, #{accountPassportDetails}, #{accountEmail}, #{accountPassword})")
 	public int insert(Account account);
 }
