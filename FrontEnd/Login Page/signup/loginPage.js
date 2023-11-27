@@ -31,4 +31,14 @@ async function login(event)
     } catch (error) {
         console.error(error);
     }
+
+    if(result= "success")
+    {
+        goToHomePage();
+    }
+}
+
+async function goToHomePage()
+{
+    window.location.href = "./Home Page/homepagedump.html";
 }
