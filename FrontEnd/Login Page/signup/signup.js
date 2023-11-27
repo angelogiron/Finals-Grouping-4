@@ -35,5 +35,12 @@ async function signUpAccount(event)
         {
             console.error(error);
         }
+    
+    goToLogInPage();
+}
+
+async function goToLogInPage()
+{
+    window.location.href = "loginPage.html";
 }
 
