@@ -1,7 +1,230 @@
-body 
-{
-    background-image: linear-gradient(135deg, #FFFFFF 10%, #4CAF50 100%);
+body {
+    background: linear-gradient(135deg, #FFFFFF 10%, #4CAF50 100%);
     background-attachment: fixed;
     font-family: "Open Sans", sans-serif;
-    color: #333333;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://c1.wallpaperflare.com/preview/875/692/943/aircraft-flight-airport-fly.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    z-index: -1;
+}
+.box 
+{
+    position: absolute;
+    right: 700px;
+    top: 160px;
+    width: 450px;
+    height: 610px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+}
+
+
+.travelType 
+{
+    margin-bottom: 20px;
+}
+
+.travelType label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.travelType select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.travelType 
+{
+    margin-bottom: 20px;
+}
+
+.travelType label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.travelType select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.preferredAirline 
+{
+    margin-bottom: 20px;
+}
+
+.preferredAirline label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.preferredAirline select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.origin 
+{
+    margin-bottom: 20px;
+}
+
+.origin label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.origin select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.destination 
+{
+    margin-bottom: 20px;
+}
+
+.destination label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.destination select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.departDate 
+{
+    margin-bottom: 20px;
+}
+
+.departDate label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.departDate input 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.returnDate 
+{
+    margin-bottom: 20px;
+}
+
+.returnDate label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.returnDate input 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.passengerCount 
+{
+    margin-bottom: 20px;
+}
+
+.passengerCount label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.passengerCount input 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filters 
+{
+    margin-bottom: 20px;
+}
+
+.filters label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.filters select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
