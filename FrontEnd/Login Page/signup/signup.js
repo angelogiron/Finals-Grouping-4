@@ -1,39 +1,46 @@
-document.getElementById("submit").addEventListener("click", submitAccount);
-function submitAccount(){
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
-    let birthday = document.getElementById("birthday");
-    let name = document.getElementById("name");
-    let phoneNum = document.getElementById("phone");
-    let passport = document.getElementById("passport");
+document.getElementById("submit").addEventListener("click", signUpAccount);
 
-    generateAccount(email, password, birthday, name, phoneNum, passport);
-}
+async function signUpAccount(event) 
+{
+    event.preventDefault();
 
-async function generateAccount(email, password, birthday, name, phoneNum, passport){
-    const url = 'http://localhost:8080/signup';
+    const accountName = document.getElementById("name").value;
+    const accountBirthday = document.getElementById("birthday").value;
+    const accountPhoneNumber = document.getElementById("phone").value;
+    const accountPassportDetails = document.getElementById("passport").value;
+    const accountEmail = document.getElementById("email").value;
+    const accountPassword = document.getElementById("password").value;
+    
+    const url = 'http://localhost:8080/signup'; 
     const options = {
         method: 'POST',
         headers: {
-            'Content-type':'application/json'
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify(
-            {
-                "accountName": "name",
-                "accountBirthday": "birthday",
-                "accountPhoneNumber": "1",
-                "accountPassportDetails": "2",
-                "accountEmail": "email",
-                "accountPassword": "password"
-            }
-        )
+        body: JSON.stringify({
+            "accountName": accountName,
+            "accountBirthday": accountBirthday,
+            "accountPhoneNumber": accountPhoneNumber,
+            "accountPassportDetails": accountPassportDetails,
+            "accountEmail": accountEmail,
+            "accountPassword": accountPassword,
+        }),
     };
 
     try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
-    } catch (error) {
-        console.error(error);
-    }
+            const response = await fetch(url, options);
+            const result = await response.json();
+            console.log(result);
+        } catch (error) 
+        {
+            console.error(error);
+        }
+    
+    goToLogInPage();
 }
+
+async function goToLogInPage()
+{
+    window.location.href = "loginPage.html";
+}
+
