@@ -14,7 +14,7 @@ async function login(event)
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "accountName": accountName,
+            "accountEmail": accountName,
             "accountPassword": accountPassword,
         }),
     };

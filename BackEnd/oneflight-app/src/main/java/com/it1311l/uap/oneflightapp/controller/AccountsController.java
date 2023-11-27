@@ -21,19 +21,18 @@ public class AccountsController
 		accountsRepository.insert(account);
 		return account;
 	}
-	
+
 	@PostMapping("/login")
 	public String login(@RequestBody Account loginRequest) {
-	    String email = loginRequest.getAccountEmail();
-	    String password = loginRequest.getAccountPassword();
-
-	    Account storedAccount = accountsRepository.findByEmail(email);
+	
+	    Account storedAccount = accountsRepository.findByEmail(loginRequest.getAccountEmail());
 	    
+	    if (storedAccount != null && storedAccount.getAccountPassword().equals(loginRequest.getAccountPassword())) {
+	        return "success";
+	    } 
 	    
-	    if (storedAccount != null && password.equals(storedAccount.getAccountPassword())) {
-	        return "Login successful!";
-	    } else {
-	        return "Login failed. Invalid email or password.";
+	    else {
+	        return loginRequest.getAccountEmail();
 	    }
 	}
 }
