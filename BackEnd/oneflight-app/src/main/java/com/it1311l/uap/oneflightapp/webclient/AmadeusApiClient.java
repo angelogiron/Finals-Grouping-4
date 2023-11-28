@@ -11,5 +11,4 @@ public interface AmadeusApiClient {
 
 	@GetExchange("airline/destinations?airlineCode=#{airlineCode}")
 	public AmadeusAirlineResponse getAirlineLocations(@PathVariable String airlineCode);
-	
 }
