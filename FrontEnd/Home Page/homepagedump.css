@@ -24,7 +24,7 @@ body::before {
     right: 700px;
     top: 160px;
     width: 450px;
-    height: 610px;
+    height: 635px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -227,4 +227,18 @@ body::before {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+
+.searchButton {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
