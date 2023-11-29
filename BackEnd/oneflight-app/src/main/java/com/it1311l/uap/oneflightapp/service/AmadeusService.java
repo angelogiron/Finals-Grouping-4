@@ -12,10 +12,12 @@ public class AmadeusService {
 
 	@Autowired
 	AirlinesRepository airlinesRepo;
+	
 	@Autowired
 	AmadeusApiClient amadeusApi;
 	
-	public AmadeusAirlineResponse airlineLoc(String airlineCode) {
+	public AmadeusAirlineResponse airlineLoc(String airlineCode) 
+	{
 		AmadeusAirlineResponse response = amadeusApi.getAirlineLocations(airlineCode);
 		airlinesRepo.insertAirlineLoc(airlineCode, response.getName(), response.getIataCode());
 		return response;

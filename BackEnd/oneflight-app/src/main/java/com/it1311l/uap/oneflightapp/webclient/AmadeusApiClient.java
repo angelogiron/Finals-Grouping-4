@@ -9,6 +9,6 @@ import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
 @HttpExchange
 public interface AmadeusApiClient {
 
-	@GetExchange("airline/destinations?airlineCode=#{airlineCode}&max=1")
+	@GetExchange("airline/destinations?airlineCode=BA&max=1")
 	public AmadeusAirlineResponse getAirlineLocations(@PathVariable String airlineCode);
 }
