@@ -99,3 +99,22 @@ h3 {
 h2 {
     font-size: 26px; 
 }
+
+button {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    background-color: #4CAF50;
+    border-style: solid;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    border-radius: 50px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: white;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 20%;
+}
