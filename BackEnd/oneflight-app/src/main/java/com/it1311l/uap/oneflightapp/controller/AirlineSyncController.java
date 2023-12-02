@@ -21,4 +21,5 @@ public class AirlineSyncController
 		return amadeusService.airlineLoc(airlineCode);
 
 	}
+	
 }
