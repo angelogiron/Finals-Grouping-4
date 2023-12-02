@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import com.it1311l.uap.oneflightapp.model.Account;
+import com.it1311l.uap.oneflightapp.model.AirlineDetails;
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
 import com.it1311l.uap.oneflightapp.model.FlightOffers;
 import com.it1311l.uap.oneflightapp.repository.AirlinesRepository;
@@ -37,12 +38,12 @@ public class FlightsController {
     }
 
     @GetMapping("/airlineCodes")
-    public List<AmadeusAirlineResponse> getAvailableAirlineCodes() {
+    public List<String> getAvailableAirlineCodes() {
         return amadeusService.getAllAirlineCodes();
     }
 
     @GetMapping("/locations")
-    public List<AmadeusAirlineResponse> getAvailableLocations() {
+    public List<String> getAvailableLocations() {
         return amadeusService.getAllLocations();
     }
 }
