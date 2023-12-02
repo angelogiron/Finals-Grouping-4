@@ -1,4 +1,4 @@
-document.getElementById("search").addEventListener("click", login);
+document.getElementById("searchButton").addEventListener("click", login);
 
 async function search(event) 
 {
