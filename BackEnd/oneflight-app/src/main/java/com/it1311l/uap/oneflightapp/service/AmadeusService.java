@@ -12,6 +12,7 @@ public class AmadeusService {
 
 	@Autowired
 	AirlinesRepository airlinesRepo;
+	
 	@Autowired
 	AmadeusApiClient amadeusApi;
 	
