@@ -13,9 +13,8 @@
 
     <div class="menu">
         <ul>
-            <li><a href="../Maintenance Pages/useradministrationpage/useradministrationpage.html" class="active">User Administration</a></li>
-            <li><a href="../Maintenance Pages/airlineconfiguration/airlineconfiguration.html">Airline Configuration</a></li>
-            <li><a href="#">Price Breakdown Configuration</a></li>
+            <li><a href="../Home Page/homepagedump.html" class="active">Home Page</a></li>
+            <li><a href="../Guest Pages/pastbookings.html">Past Bookings</a></li>
             <li><a href="../Login Page/signup/loginPage.html" class="logout-button">Logout</a></li>
         </ul>
     </div>
@@ -30,20 +29,19 @@
                     <option value="oneWay">One Way</option>
                 </select>
             </div>
-            
-            <div class="preferredAirline">
-                <label for="preferredAirline">Preferred Airline</label>
-                <select id="preferredAirlineDropdown" name="preferredAirline">
-                    <option value="" disabled selected>Select Airline</option>
-                </select>
-            </div>            
+            <form>
+                <div class="preferredAirline">
+                    <label for="preferredAirline">Preferred Airline</label>
+                    <select id="preferredAirlineDropdown" name="preferredAirline">
+                        <option value="" selected>Select Airline</option>
+                    </select>
+                </div>      
+            </form>    
 
             <div class="origin">
                 <label for="origin">Origin</label>
                 <select id="originDropdown" name="origin">
                     <option value="" disabled selected></option>
-                    <option value="origin1">Origin1</option>
-                    <option value="origin2">Origin2</option>
                 </select>
             </div>
             
@@ -51,8 +49,6 @@
                 <label for="destination">Destination</label>
                 <select id="destinationDropdown" name="destination">
                     <option value="" disabled selected></option>
-                    <option value="destination1">Destination1</option>
-                    <option value="destination2">Destination2</option>
                 </select>
             </div>
             
@@ -79,7 +75,9 @@
                     <option value="noConnectingFlights">Do not allow connecting flight</option>
                 </select>
             </div>
+
             <button class="searchButton" id="searchButton">Search</button>
+
         </div>
     </div>
     <script src="homepagedump.js"></script>

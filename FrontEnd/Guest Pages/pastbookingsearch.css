@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #FFFFFF 10%, #4CAF50 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px;
+}
+
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+}
+
+.box {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+h2 {
+    font-size: 26px; 
+}
+
+.Ref {
+    margin-top: 20px;
+}
+
+.LastName{
+    margin-top: 20px;
+}
+
+.Search
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 100px;
+    left: 1020px;
+    width: 200px;
+    height: 37px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.Ref input{
+    position: absolute;
+    top: 100px;
+    left: 570px;
+}
+
+.LastName input{
+    position: absolute;
+    top: 100px;
+    left: 800px;
+}
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: -9px;
+}

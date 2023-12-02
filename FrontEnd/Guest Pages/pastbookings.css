@@ -6,12 +6,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: 0px;
-}
-
-.header {
-    background-color: #000000;
-    color: white;
-    padding: 10px;
+    overflow: hidden;
 }
 
 .user-info {
@@ -58,7 +53,8 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    height: 830px;
+    width: 350px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -76,26 +72,43 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 330px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-left: -9px;
 }
 
 h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.logout-button {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 14px 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 h2 {
-    font-size: 26px; 
+    font-size: 23px; 
+}
+
+.prevRound
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 875px;
+    left: 786px;
+    width: 50px;
+    height: 34px;
+}
+
+.nextRound
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 875px;
+    left: 1088px;
+    width: 50px;
+    height: 34px;
 }
