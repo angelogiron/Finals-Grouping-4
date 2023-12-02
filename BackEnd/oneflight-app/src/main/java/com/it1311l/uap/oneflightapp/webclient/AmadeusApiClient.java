@@ -13,6 +13,11 @@ public interface AmadeusApiClient {
 	@GetExchange("airline/destinations?airlineCode={airlineCode}")
 	public AmadeusAirlineResponse getAirlineLocations(@PathVariable String airlineCode);
 	
-	@GetExchange("/shopping/flight-offers?originLocationCode={originLocationCode}&destinationLocationCode={destinationLocationCode}&departureDate={departureDate}&returnDate={returnDate}}&adults={adults}&nonStop={nonStop}")
+	@GetExchange("/shopping/flight-offers?originLocationCode={originLocationCode}"
+			+ "&destinationLocationCode={destinationLocationCode}"
+			+ "&departureDate={departureDate}"
+			+ "&returnDate={returnDate}}"
+			+ "&adults={adults}"
+			+ "&nonStop={nonStop}")
 	public FlightOffersResponse getFlightOffers(@PathVariable String originLocationCode, @PathVariable String destinationLocationCode, @PathVariable String departureDate, @PathVariable String returnDate, @PathVariable int adults, @PathVariable int nonStop);
 }
