@@ -21,10 +21,12 @@ public class AmadeusService {
 	
 	public AmadeusAirlineResponse airlineLoc(String airlineCode) {
 		AmadeusAirlineResponse response = amadeusApi.getAirlineLocations(airlineCode);
-		List<AirlineDetails> heyyy = response.getResponse();
+		/*
+		List<AirlineDetails> heyyy = response.getData();
 		AirlineDetails details = heyyy.get(0);
 		
 		airlinesRepo.insertAirlineLoc(airlineCode, details.getName(), details.getIataCode());
+		*/
 		return response;
 	}
 }
