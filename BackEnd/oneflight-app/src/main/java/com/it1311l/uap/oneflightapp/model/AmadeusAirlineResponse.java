@@ -9,7 +9,7 @@ public class AmadeusAirlineResponse {
 	public List<AirlineDetails> getResponse() {
 		return response;
 	}
-
+	
 	public void setResponse(List<AirlineDetails> response) {
 		this.response = response;
 	}
