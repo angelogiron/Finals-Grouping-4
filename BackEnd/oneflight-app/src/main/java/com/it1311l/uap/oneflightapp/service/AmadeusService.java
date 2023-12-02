@@ -1,5 +1,6 @@
 package com.it1311l.uap.oneflightapp.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,10 @@ public class AmadeusService {
 	
 	public AmadeusAirlineResponse airlineLoc(String airlineCode) {
 		AmadeusAirlineResponse response = amadeusApi.getAirlineLocations(airlineCode);
-		/*
-		List<AirlineDetails> heyyy = response.getData();
+		ArrayList<AirlineDetails> heyyy = response.getData();
 		AirlineDetails details = heyyy.get(0);
-		
 		airlinesRepo.insertAirlineLoc(airlineCode, details.getName(), details.getIataCode());
-		*/
+		
 		return response;
 	}
 }

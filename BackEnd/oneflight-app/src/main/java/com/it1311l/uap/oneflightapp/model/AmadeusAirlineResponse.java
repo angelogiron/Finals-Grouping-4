@@ -5,17 +5,17 @@ import java.util.List;
 
 public class AmadeusAirlineResponse {
 	
-	private List<AirlineDetails> data= new ArrayList<AirlineDetails>();
+	private ArrayList<AirlineDetails> data= new ArrayList<AirlineDetails>();
 	
-	public List<AirlineDetails> getData() {
+	public ArrayList<AirlineDetails> getData() {
 		return data;
 	}
 	
-	public void setData(List<AirlineDetails> data) {
+	public void setData(ArrayList<AirlineDetails> data) {
 		this.data = data;
 	}
 	
-	public void setDetails(List<AirlineDetails> data) {
+	public void setDetails(ArrayList<AirlineDetails> data) {
 		data.add(new AirlineDetails());
 	}
 	
