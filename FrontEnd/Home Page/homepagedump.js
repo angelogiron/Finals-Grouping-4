@@ -1,37 +1,56 @@
-document.addEventListener('DOMContentLoaded', function () {
-    search();
+window.addEventListener('load', populateDropdowns);
+async function getAirlineCodes(){
 
-    const searchButton = document.getElementById('searchButton');
-    searchButton.addEventListener('click', function () {
-        search();
-    });
-});
-
-async function search() {
-    fetch('http://localhost:8080/airlineCodes')
-        .then(response => response.json())
-        .then(data => populateDropdown('preferredAirlineDropdown', data, 'preferredAirline'));
-
-    fetch('http://localhost:8080/locations')
-        .then(response => response.json())
-        .then(data => populateDropdown('originDropdown', data, 'origin'));
-
-    fetch('http://localhost:8080/locations')
-        .then(response => response.json())
-        .then(data => populateDropdown('destinationDropdown', data, 'destination')); 
+    const url = "http://localhost:8080/airlineCodes"; 
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            console.log(result);
+        } 
+    catch (error) 
+        {
+            console.error(error);
+        }
 }
 
-function populateDropdown(dropdownId, data, propertyName) {
-    const dropdown = document.getElementById(dropdownId);
+async function getLocations(){
 
-    dropdown.innerHTML = '<option value="" disabled selected>Select ' + propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + '</option>';
-
-    data.forEach(item => {
-        const option = document.createElement('option');
-        option.value = item[propertyName];
-        option.text = item[propertyName];
-        dropdown.appendChild(option);
-    });
+    const url = "http://localhost:8080/locations"; 
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            //console.log(result);
+        } 
+    catch (error) 
+        {
+            //console.error(error);
+        }
 }
 
+function populateDropdowns() {
+    let airlineCodes = getAirlineCodes();
+
+    let Locations = getLocations();
+
+    var preferredAirlineDropdown = document.getElementById("preferredAirlineDropdown");
+
+    for(let i = 0; i < airlineCodes.length; i++){
+        var opt = document.createElement("option"); 
+        opt.text = airlineCodes[i];           
+        preferredAirlineDropdown.add(opt);
+    }
+    
+}
 
