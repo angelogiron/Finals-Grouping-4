@@ -20,15 +20,15 @@ public class AmadeusService {
 	@Autowired
 	AmadeusApiClient amadeusApi;
 	
-	public AmadeusAirlineResponse airlineLoc(String airlineCode) {
+	public AmadeusAirlineResponse airlineLoc(String airlineCode) 
+	{
 		AmadeusAirlineResponse response = amadeusApi.getAirlineLocations(airlineCode);
 		ArrayList<AirlineDetails> heyyy = response.getData();
 
 		for (AirlineDetails details : heyyy) 
 		{
             airlinesRepo.insertAirlineLoc(airlineCode, details.getName(), details.getIataCode());
-        }
-		
+        }	
 		return response;
 	}
 }

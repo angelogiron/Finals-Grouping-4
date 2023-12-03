@@ -1,0 +1,51 @@
+.flight-info-box {
+  width: 350px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 2000px;
+}
+  
+.flight-info-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.flight-info-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.flight-info-box input {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.book-flight-btn
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 2030px;
+    left: 778px;
+    width: 165px;
+    height: 37px;
+}
+
+.cancel-btn
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 2030px;
+    left: 963px;
+    width: 165px;
+    height: 37px;
+}

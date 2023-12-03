@@ -22,7 +22,7 @@ body::before {
 {
     position: absolute;
     right: 700px;
-    top: 160px;
+    top: 110px;
     width: 450px;
     height: 635px;
     padding: 20px;
@@ -237,7 +237,7 @@ body::before {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
