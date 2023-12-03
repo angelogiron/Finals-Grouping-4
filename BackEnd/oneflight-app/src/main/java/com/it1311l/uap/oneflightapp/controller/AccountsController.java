@@ -3,6 +3,7 @@ import com.it1311l.uap.oneflightapp.repository.AccountsRepository;
 import com.it1311l.uap.oneflightapp.model.Account;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,4 +35,21 @@ public class AccountsController
 	    }
 	}
 
+	@PostMapping("/admin/change-role-to-admin")
+		public String changeRoleToAdmin(@RequestBody Account changeRoleRequest) {
+			accountsRepository.changeToAdmin(changeRoleRequest.getAccountEmail());
+			return "success";
+		}
+		
+		@PostMapping("/admin/change-role-to-guest")
+		public String changeRoleToGuest(@RequestBody Account changeRoleRequest) {
+			accountsRepository.changeToGuest(changeRoleRequest.getAccountEmail());
+			return "success";
+		}
+		
+		@GetMapping("/admin/get-emails")
+		public void getEmails() {
+			accountsRepository.getEmail();
+		}
+	
 }
