@@ -18,31 +18,40 @@ async function login(event) {
         }),
     };
 
+    let result;
+
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        result = await response.text();
 
         if (response.ok) {
             console.log(result);
         } else {
             console.error(result);
-        }
+        }        
     } catch (error) {
         console.error(error);
     }
 
-    if (result = "guest") {
+    if(result==="guest")
+    {
         goToHomePage();
     }
-    else {
-
+    else if(result==="Invalid")
+    {
+        tryAgain();
     }
 }
 
-async function goToHomePage() {
+function tryAgain()
+{
+    window.location.href = "loginPage.html";
+}
+
+function goToHomePage() {
     window.location.href = "../../Home Page/homepagedump.html";
 }
 
-async function goToAdminPage() {
+function goToAdminPage() {
     window.location.href = "../../Maintenance Pages/useradministrationpage/useradministrationpage.html"
 }
