@@ -3,7 +3,7 @@ window.addEventListener('load', populateDropdowns);
 var userInputArray = [];
 
 async function getAirlineCodes() {
-    const url = "http://localhost:8080/airlineCodes"; 
+    const url = "http://localhost:8080/airlineCodes";
     const options = {
         method: 'GET',
         headers: {
@@ -14,14 +14,14 @@ async function getAirlineCodes() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        return result; 
+        return result;
     } catch (error) {
         console.error(error);
     }
 }
 
 async function getLocations() {
-    const url = "http://localhost:8080/locations"; 
+    const url = "http://localhost:8080/locations";
     const options = {
         method: 'GET',
         headers: {
@@ -39,39 +39,38 @@ async function getLocations() {
 }
 
 async function populateDropdowns() {
-    let airlineCodes = await getAirlineCodes(); 
-    let locations = await getLocations(); 
+    let airlineCodes = await getAirlineCodes();
+    let locations = await getLocations();
 
     var preferredAirlineDropdown = document.getElementById("preferredAirlineDropdown");
 
     for (let i = 0; i < airlineCodes.length; i++) {
-        var opt = document.createElement("option"); 
-        opt.text = airlineCodes[i];           
+        var opt = document.createElement("option");
+        opt.text = airlineCodes[i];
         preferredAirlineDropdown.add(opt);
     }
 
     var originDropdown = document.getElementById("originDropdown");
 
     for (let i = 0; i < airlineCodes.length; i++) {
-        var opt = document.createElement("option"); 
-        opt.text = locations[i];           
+        var opt = document.createElement("option");
+        opt.text = locations[i];
         originDropdown.add(opt);
     }
 
     var destinationDropdown = document.getElementById("destinationDropdown");
 
     for (let i = 0; i < airlineCodes.length; i++) {
-        var opt = document.createElement("option"); 
-        opt.text = locations[i];           
+        var opt = document.createElement("option");
+        opt.text = locations[i];
         destinationDropdown.add(opt);
     }
-    
+
 }
 
 var searchButton = document.getElementById("searchButton").addEventListener("click", getFlightOffers);
 
-async function getFlightOffers(event)
-{
+async function getFlightOffers(event) {
     event.preventDefault();
 
     const preferredAirline = document.getElementById("preferredAirlineDropdown").value;
@@ -100,19 +99,19 @@ async function getFlightOffers(event)
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text(); 
+        const result = await response.text();
 
         if (response.ok) {
-            console.log(result); 
+            console.log(result);
         } else {
-            console.error(result); 
+            console.error(result);
         }
     } catch (error) {
         console.error(error);
     }
 }
 
-searchButton.addEventListener('click', function(event) {
+searchButton.addEventListener('click', function (event) {
     event.preventDefault();
     var userInput = {};
 
@@ -122,7 +121,7 @@ searchButton.addEventListener('click', function(event) {
     userInput["Destination"] = document.getElementById("destinationDropdown").value;
     userInput["Depart Date"] = document.getElementById("departDate").value;
     userInput["Return Date"] = document.getElementById("returnDate").value;
-    
+
 
     userInputArray.push(userInput);
     createNewSearchBox();
@@ -132,8 +131,8 @@ function createNewSearchBox() {
     var resultBox = document.createElement("div");
     resultBox.classList.add("resultBox");
 
-    userInputArray.forEach(function(userInput) {
-        Object.keys(userInput).forEach(function(key) {
+    userInputArray.forEach(function (userInput) {
+        Object.keys(userInput).forEach(function (key) {
             var fieldBox = createFieldBox(key, userInput[key]);
             resultBox.appendChild(fieldBox);
         });
@@ -145,7 +144,7 @@ function createNewSearchBox() {
 
 function createFieldBox(labelText, inputValue) {
     var fieldBox = document.createElement("div");
-    fieldBox.classList.add("fieldBox"); 
+    fieldBox.classList.add("fieldBox");
 
     var label = document.createElement("label");
     label.textContent = labelText;

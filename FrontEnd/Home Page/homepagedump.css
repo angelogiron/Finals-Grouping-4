@@ -15,11 +15,11 @@ body::before {
     background-image: url("https://c1.wallpaperflare.com/preview/875/692/943/aircraft-flight-airport-fly.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.2; 
+    opacity: 0.2;
     z-index: -1;
 }
-.box 
-{
+
+.box {
     position: absolute;
     right: 700px;
     top: 110px;
@@ -28,25 +28,22 @@ body::before {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
 }
 
 
-.travelType 
-{
+.travelType {
     margin-bottom: 20px;
 }
 
-.travelType label 
-{
+.travelType label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.travelType select 
-{
+.travelType select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -55,20 +52,17 @@ body::before {
 }
 
 
-.travelType 
-{
+.travelType {
     margin-bottom: 20px;
 }
 
-.travelType label 
-{
+.travelType label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.travelType select 
-{
+.travelType select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -76,21 +70,18 @@ body::before {
     box-sizing: border-box;
 }
 
-.preferredAirline 
-{
+.preferredAirline {
     margin-bottom: 20px;
 }
 
-.preferredAirline label 
-{
+.preferredAirline label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.preferredAirline select 
-{
+.preferredAirline select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -98,21 +89,18 @@ body::before {
     box-sizing: border-box;
 }
 
-.origin 
-{
+.origin {
     margin-bottom: 20px;
 }
 
-.origin label 
-{
+.origin label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.origin select 
-{
+.origin select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -120,21 +108,18 @@ body::before {
     box-sizing: border-box;
 }
 
-.destination 
-{
+.destination {
     margin-bottom: 20px;
 }
 
-.destination label 
-{
+.destination label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.destination select 
-{
+.destination select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -142,21 +127,18 @@ body::before {
     box-sizing: border-box;
 }
 
-.departDate 
-{
+.departDate {
     margin-bottom: 20px;
 }
 
-.departDate label 
-{
+.departDate label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.departDate input 
-{
+.departDate input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -164,42 +146,18 @@ body::before {
     box-sizing: border-box;
 }
 
-.returnDate 
-{
+.returnDate {
     margin-bottom: 20px;
 }
 
-.returnDate label 
-{
+.returnDate label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.returnDate input 
-{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.passengerCount 
-{
-    margin-bottom: 20px;
-}
-
-.passengerCount label 
-{
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: white;
-}
-
-.passengerCount input 
-{
+.returnDate input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -207,21 +165,37 @@ body::before {
     box-sizing: border-box;
 }
 
-.filters 
-{
+.passengerCount {
     margin-bottom: 20px;
 }
 
-.filters label 
-{
+.passengerCount label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
 }
 
-.filters select 
-{
+.passengerCount input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.filters select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -252,7 +226,7 @@ body::before {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .fieldBox {
