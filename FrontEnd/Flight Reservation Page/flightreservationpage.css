@@ -5,7 +5,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 2000px;
+  height: 2070px;
 }
   
 .flight-info-box h2 {
@@ -32,7 +32,7 @@
     font-size: 16px;
     background-color: #4caf50;
     position: absolute;
-    top: 2030px;
+    top: 2080px;
     left: 778px;
     width: 165px;
     height: 37px;
@@ -44,7 +44,58 @@
     font-size: 16px;
     background-color: #4caf50;
     position: absolute;
-    top: 2030px;
+    top: 2080px;
+    left: 963px;
+    width: 165px;
+    height: 37px;
+}
+
+.checkbox-container 
+{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    position: absolute;
+    top: 2010px;
+    left: 754px;
+  }
+  .checkbox-container input 
+  {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4caf50;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .checkbox-container input:checked 
+  {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+    text-align: center;
+  }
+  
+.login-user
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 2125px;
+    left: 778px;
+    width: 165px;
+    height: 37px;
+}
+
+.book-guest
+{
+    color: #fff;
+    font-size: 16px;
+    background-color: #4caf50;
+    position: absolute;
+    top: 2125px;
     left: 963px;
     width: 165px;
     height: 37px;
