@@ -28,11 +28,28 @@ public class AccountsController
 	    Account storedAccount = accountsRepository.findByEmail(loginRequest.getAccountEmail());
 	    
 	    if (storedAccount != null && storedAccount.getAccountPassword().equals(loginRequest.getAccountPassword())) {
-	        return "success";
+	        return storedAccount.getRole();
 	    } 
 	    
 	    else {
 	        return loginRequest.getAccountEmail();
 	    }
 	}
-}
+	
+	@PostMapping("/admin/change-role-to-admin")
+	public String changeRoleToAdmin(@RequestBody Account changeRoleRequest) {
+		accountsRepository.changeToAdmin(changeRoleRequest.getAccountEmail());
+		return "success";
+	}
+	
+	@PostMapping("/admin/change-role-to-admin")
+	public String changeRoleToGuest(@RequestBody Account changeRoleRequest) {
+		accountsRepository.changeToGuest(changeRoleRequest.getAccountEmail());
+		return "success";
+	}
+	
+	@GetMapping("/admin/get-emails")
+	public void getEmails() {
+		accountsRepository.getEmail();
+	}
+	}

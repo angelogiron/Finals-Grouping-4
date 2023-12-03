@@ -8,7 +8,24 @@ public class Account
 	private int accountPassportDetails;
 	private String accountEmail;
 	private String accountPassword;
+	private String role;
 		
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public void setAccountPhoneNumber(int accountPhoneNumber) {
+		this.accountPhoneNumber = accountPhoneNumber;
+	}
+
+	public void setAccountPassportDetails(int accountPassportDetails) {
+		this.accountPassportDetails = accountPassportDetails;
+	}
+
 	public String getAccountName() 
 	{
 		return accountName;

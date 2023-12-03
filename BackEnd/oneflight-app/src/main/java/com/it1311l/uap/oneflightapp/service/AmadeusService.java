@@ -30,9 +30,10 @@ public class AmadeusService {
 	
 	public AmadeusAirlineResponse airlineLoc(String airlineCode) 
 	{
+		
 		AmadeusAirlineResponse response = amadeusApi.getAirlineLocations(airlineCode);
 		ArrayList<AirlineDetails> heyyy = response.getData();
-
+		
 		for (AirlineDetails details : heyyy) 
 		{
             airlinesRepo.insertAirlineLoc(airlineCode, details.getName(), details.getIataCode());

@@ -1,7 +1,6 @@
 document.getElementById("login-button").addEventListener("click", login);
 
-async function login(event) 
-{
+async function login(event) {
     event.preventDefault();
 
     const accountName = document.getElementById("input-username").value;
@@ -21,24 +20,29 @@ async function login(event)
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text(); 
+        const result = await response.text();
 
         if (response.ok) {
-            console.log(result); 
+            console.log(result);
         } else {
-            console.error(result); 
+            console.error(result);
         }
     } catch (error) {
         console.error(error);
     }
 
-    if(result = "success")
-    {
+    if (result = "guest") {
         goToHomePage();
+    }
+    else {
+
     }
 }
 
-async function goToHomePage()
-{
+async function goToHomePage() {
     window.location.href = "../../Home Page/homepagedump.html";
+}
+
+async function goToAdminPage() {
+    window.location.href = "../../Maintenance Pages/useradministrationpage/useradministrationpage.html"
 }
