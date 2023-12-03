@@ -52,7 +52,7 @@ async function populateDropdowns() {
 
     var originDropdown = document.getElementById("originDropdown");
 
-    for (let i = 0; i < airlineCodes.length; i++) {
+    for (let i = 0; i < locations.length; i++) {
         var opt = document.createElement("option");
         opt.text = locations[i];
         originDropdown.add(opt);
@@ -60,7 +60,7 @@ async function populateDropdowns() {
 
     var destinationDropdown = document.getElementById("destinationDropdown");
 
-    for (let i = 0; i < airlineCodes.length; i++) {
+    for (let i = 0; i < locations.length; i++) {
         var opt = document.createElement("option");
         opt.text = locations[i];
         destinationDropdown.add(opt);
