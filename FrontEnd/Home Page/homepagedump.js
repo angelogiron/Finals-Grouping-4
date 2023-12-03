@@ -89,7 +89,7 @@ async function getFlightOffers(event)
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "originLocationCode": origin,
+            "originLocation": origin,
             "destinationLocation": destination,
             "departureDate": departDate,
             "arrivalDate": returnDate,
