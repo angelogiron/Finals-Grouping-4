@@ -65,5 +65,48 @@ async function populateDropdowns() {
     }
     
 }
+var searchButton = document.getElementById("searchButton");
+searchButton.addEventListener('click', createNewSearchBox);
+function createNewSearchBox() {
+    var resultBox = document.createElement("div");
+    resultBox.classList.add("resultBox");
+
+    var fields = [
+        "Preferred Airline",
+        "Travel Type",
+        "Available Seats",
+        "Origin",
+        "Destination",
+        "Depart Date",
+        "Return Date",
+        "Queuing Office",
+        "Reserve Seats"
+    ];
+
+    fields.forEach(function (field) {
+        var fieldBox = createFieldBox(field);
+        resultBox.appendChild(fieldBox);
+    });
+
+    var searchButton = document.getElementById("searchButton");
+    searchButton.parentNode.insertBefore(resultBox, searchButton.nextSibling);
+}
+
+function createFieldBox(labelText) {
+
+    var fieldBox = document.createElement("div");
+    fieldBox.classList.add("fieldBox"); 
+
+    var label = document.createElement("label");
+    label.textContent = labelText;
+
+    var inputField = document.createElement("input");
+    inputField.type = "text"; 
+
+    fieldBox.appendChild(label);
+    fieldBox.appendChild(inputField);
+
+    return fieldBox;
+}
 
 

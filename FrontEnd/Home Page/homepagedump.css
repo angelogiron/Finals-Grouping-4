@@ -242,3 +242,34 @@ body::before {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.resultBox {
+    position: absolute;
+    right: 1px;
+    top: 700px;
+    width: 450px;
+    height: 535px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+
+.fieldBox {
+    margin-bottom: 5px;
+}
+
+.fieldBox label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.fieldBox input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
