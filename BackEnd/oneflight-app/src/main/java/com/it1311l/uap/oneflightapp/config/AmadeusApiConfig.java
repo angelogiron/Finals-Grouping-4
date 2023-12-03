@@ -15,7 +15,7 @@ public class AmadeusApiConfig {
 	AmadeusApiClient amadeusApi() {
 		WebClient webClient = WebClient.builder()
 				.baseUrl("https://test.api.amadeus.com/v1/")
-		.defaultHeader("Authorization", "Bearer " + "wGKVqz7UTOJM2a1FV9iLBsJmvDUS")
+		.defaultHeader("Authorization", "Bearer " + "aTqht08nGeKyySQg4mAXPW2D6jpi")
 				.build();
 		
 		HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory

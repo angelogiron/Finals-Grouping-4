@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.it1311l.uap.oneflightapp.model.AirlineDetails;
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
+import com.it1311l.uap.oneflightapp.model.FlightOffers;
+import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 import com.it1311l.uap.oneflightapp.repository.AirlinesRepository;
+import com.it1311l.uap.oneflightapp.repository.FlightOffersRepository;
 import com.it1311l.uap.oneflightapp.webclient.AmadeusApiClient;
 
 @Service
@@ -16,7 +19,10 @@ public class AmadeusService {
 
 	@Autowired
 	AirlinesRepository airlinesRepo;
-	
+	/*
+	@Autowired
+	FlightOffersRepository flightsRepo;
+	*/
 	@Autowired
 	AmadeusApiClient amadeusApi;
 	
@@ -31,4 +37,8 @@ public class AmadeusService {
         }	
 		return response;
 	}
+	/*
+	public FlightOffersResponse getFlightOffers() {
+		
+	}*/
 }

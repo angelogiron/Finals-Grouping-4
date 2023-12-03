@@ -5,6 +5,7 @@ import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
 
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
+import com.it1311l.uap.oneflightapp.model.FlightOffersRequest;
 import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 
 @HttpExchange
@@ -18,6 +19,6 @@ public interface AmadeusApiClient {
 			+ "&departureDate={departureDate}"
 			+ "&returnDate={returnDate}}"
 			+ "&adults={adults}"
-			+ "&nonStop={nonStop}")
-	public FlightOffersResponse getFlightOffers(@PathVariable String originLocationCode, @PathVariable String destinationLocationCode, @PathVariable String departureDate, @PathVariable String returnDate, @PathVariable int adults, @PathVariable int nonStop);
+			+ "&includedAirlineCodes={airlineCode}")
+	public FlightOffersResponse getFlightOffers(@PathVariable FlightOffersRequest request);
 }

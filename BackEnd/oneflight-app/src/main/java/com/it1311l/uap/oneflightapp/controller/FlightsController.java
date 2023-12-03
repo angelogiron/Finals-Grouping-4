@@ -11,8 +11,11 @@ import com.it1311l.uap.oneflightapp.model.Account;
 import com.it1311l.uap.oneflightapp.model.AirlineDetails;
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
 import com.it1311l.uap.oneflightapp.model.FlightOffers;
+import com.it1311l.uap.oneflightapp.model.FlightOffersRequest;
+import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 import com.it1311l.uap.oneflightapp.repository.AirlinesRepository;
 import com.it1311l.uap.oneflightapp.repository.FlightOffersRepository;
+import com.it1311l.uap.oneflightapp.service.AmadeusService;
 
 @RestController
 public class FlightsController {
@@ -21,22 +24,14 @@ public class FlightsController {
     private AirlinesRepository amadeusService;
     
     @Autowired
-    private FlightOffersRepository access;
-    
+    AmadeusService amadeusApi;
+    /*
     @GetMapping("/flight-offers")
-    public List<FlightOffers> getFlightOffers(
-    		@PathVariable int travelType,
-    		@PathVariable String airlineCode,
-            @PathVariable String originLocation,
-            @PathVariable String destinationLocation,
-            @PathVariable String departureDate,
-            @PathVariable String arrivalDate,
-            @PathVariable int passengerCount
-            ) {
-				return access.getFlightOffers(); 
+    public FlightOffersResponse getFlightOffers(@PathVariable FlightOffersRequest request) {
+				return amadeusApi.getFlightOffers(); 
    
     }
-
+*/
     @GetMapping("/airlineCodes")
     public List<String> getAvailableAirlineCodes() {
         return amadeusService.getAllAirlineCodes();
