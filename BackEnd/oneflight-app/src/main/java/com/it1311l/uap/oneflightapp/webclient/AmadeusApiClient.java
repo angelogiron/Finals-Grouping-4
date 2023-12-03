@@ -5,7 +5,6 @@ import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
 
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
-import com.it1311l.uap.oneflightapp.model.FlightOffersRequest;
 import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 
 @HttpExchange

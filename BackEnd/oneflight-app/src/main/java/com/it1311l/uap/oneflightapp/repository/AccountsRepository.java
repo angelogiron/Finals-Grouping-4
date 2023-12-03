@@ -14,6 +14,7 @@ public interface AccountsRepository
 	
 	@Select("SELECT acountEmail FROM accounts")
 	public void getEmail();
+  
 	@Insert("INSERT INTO accounts(accountName, accountBirthday, accountPhoneNumber, accountPassportDetails, accountEmail, accountPassword, role) VALUES (#{accountName}, #{accountBirthday}, #{accountPhoneNumber}, #{accountPassportDetails}, #{accountEmail}, #{accountPassword},guest)")
 	public int insert(Account account);
 	
