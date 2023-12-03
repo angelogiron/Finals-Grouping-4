@@ -3,8 +3,6 @@ import com.it1311l.uap.oneflightapp.repository.AccountsRepository;
 import com.it1311l.uap.oneflightapp.model.Account;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,15 +22,16 @@ public class AccountsController
 
 	@PostMapping("/login")
 	public String login(@RequestBody Account loginRequest) {
-	
 	    Account storedAccount = accountsRepository.findByEmail(loginRequest.getAccountEmail());
-	    
-	    if (storedAccount != null && storedAccount.getAccountPassword().equals(loginRequest.getAccountPassword())) {
-	        return "success";
-	    } 
-	    
-	    else {
-	        return loginRequest.getAccountEmail();
+
+	    if (storedAccount != null && storedAccount.getAccountPassword().equals(loginRequest.getAccountPassword())) 
+	    { 
+	        return storedAccount.getRole();
+	    }
+	    else 
+	    {       
+	        return "Invalid";
 	    }
 	}
+
 }

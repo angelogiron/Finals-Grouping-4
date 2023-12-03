@@ -5,47 +5,92 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 2000px;
+  height: 2070px;
 }
-  
+
 .flight-info-box h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-  
+
 .flight-info-box label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
-  
+
 .flight-info-box input {
-    width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.book-flight-btn
-{
-    color: #fff;
-    font-size: 16px;
-    background-color: #4caf50;
-    position: absolute;
-    top: 2030px;
-    left: 778px;
-    width: 165px;
-    height: 37px;
+.book-flight-btn {
+  color: #fff;
+  font-size: 16px;
+  background-color: #4caf50;
+  position: absolute;
+  top: 2080px;
+  left: 778px;
+  width: 165px;
+  height: 37px;
 }
 
-.cancel-btn
-{
-    color: #fff;
-    font-size: 16px;
-    background-color: #4caf50;
-    position: absolute;
-    top: 2030px;
-    left: 963px;
-    width: 165px;
-    height: 37px;
+.cancel-btn {
+  color: #fff;
+  font-size: 16px;
+  background-color: #4caf50;
+  position: absolute;
+  top: 2080px;
+  left: 963px;
+  width: 165px;
+  height: 37px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  position: absolute;
+  top: 2010px;
+  left: 754px;
+}
+
+.checkbox-container input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4caf50;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox-container input:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+  text-align: center;
+}
+
+.login-user {
+  color: #fff;
+  font-size: 16px;
+  background-color: #4caf50;
+  position: absolute;
+  top: 2125px;
+  left: 778px;
+  width: 165px;
+  height: 37px;
+}
+
+.book-guest {
+  color: #fff;
+  font-size: 16px;
+  background-color: #4caf50;
+  position: absolute;
+  top: 2125px;
+  left: 963px;
+  width: 165px;
+  height: 37px;
 }

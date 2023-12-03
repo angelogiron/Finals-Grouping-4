@@ -11,6 +11,6 @@ public interface AccountsRepository
 	@Select("SELECT * FROM accounts WHERE accountEmail = #{accountEmail}")
 	Account findByEmail(String accountEmail);
 	
-	@Insert("INSERT INTO accounts(accountName, accountBirthday, accountPhoneNumber, accountPassportDetails, accountEmail, accountPassword) VALUES (#{accountName}, #{accountBirthday}, #{accountPhoneNumber}, #{accountPassportDetails}, #{accountEmail}, #{accountPassword})")
+	@Insert("INSERT INTO accounts(accountName, accountBirthday, accountPhoneNumber, accountPassportDetails, accountEmail, accountPassword, role) VALUES (#{accountName}, #{accountBirthday}, #{accountPhoneNumber}, #{accountPassportDetails}, #{accountEmail}, #{accountPassword}, 'guest')")
 	public int insert(Account account);
 }

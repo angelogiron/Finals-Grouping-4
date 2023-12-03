@@ -19,67 +19,68 @@
         </ul>
     </div>
 
-        <div class="box">
+    <div class="box">
 
-            <div class="travelType">
-                <label for="travelType">Travel Type</label>
-                <select id="travelType" name="travelType">
-                    <option value="" disabled selected></option>
-                    <option value="roundTrip">Round Trip</option>
-                    <option value="oneWay">One Way</option>
-                </select>
-            </div>
-            <form>
-                <div class="preferredAirline">
-                    <label for="preferredAirline">Preferred Airline</label>
-                    <select id="preferredAirlineDropdown" name="preferredAirline">
-                        <option value="" selected>Select Airline</option>
-                    </select>
-                </div>      
-            </form>    
-
-            <div class="origin">
-                <label for="origin">Origin</label>
-                <select id="originDropdown" name="origin">
-                    <option value="" disabled selected></option>
-                </select>
-            </div>
-            
-            <div class="destination">
-                <label for="destination">Destination</label>
-                <select id="destinationDropdown" name="destination">
-                    <option value="" disabled selected></option>
-                </select>
-            </div>
-            
-            <div class="departDate">
-                <label for="departDate" class="depart-date-label">Depart</label>
-                <input type="date" id="departDate" name="departDate">
-            </div>
-
-            <div class="returnDate">
-                <label for="returnDate" class="return-date-label">Return</label>
-                <input type="date" id="returnDate" name="returnDate">
-            </div>
-            
-            <div class="passengerCount">
-                <label for="passengerCount">Passenger Count</label>
-                <input type="number" id="passengerCount" name="passengerCount" placeholder="Enter number of passengers">
-            </div>
-
-            <div class="filters">
-                <label for="filterOptions">Filters</label>
-                <select id="filterOptions" name="filterOptions">
-                    <option value="" disabled selected></option>
-                    <option value="lowestPrice">Lowest Price First</option>
-                    <option value="noConnectingFlights">Do not allow connecting flight</option>
-                </select>
-            </div>
-
-            <button class="searchButton" id="searchButton">Search</button>
-
+        <div class="travelType">
+            <label for="travelType">Travel Type</label>
+            <select id="travelType" name="travelType">
+                <option value="" disabled selected></option>
+                <option value="roundTrip">Round Trip</option>
+                <option value="oneWay">One Way</option>
+            </select>
         </div>
+        <form>
+            <div class="preferredAirline">
+                <label for="preferredAirline">Preferred Airline</label>
+                <select id="preferredAirlineDropdown" name="preferredAirline">
+                    <option value="" selected>Select Airline</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="origin">
+            <label for="origin">Origin</label>
+            <select id="originDropdown" name="origin">
+                <option value="" disabled selected></option>
+            </select>
+        </div>
+
+        <div class="destination">
+            <label for="destination">Destination</label>
+            <select id="destinationDropdown" name="destination">
+                <option value="" disabled selected></option>
+            </select>
+        </div>
+
+        <div class="departDate">
+            <label for="departDate" class="depart-date-label">Depart</label>
+            <input type="date" id="departDate" name="departDate">
+        </div>
+
+        <div class="returnDate">
+            <label for="returnDate" class="return-date-label">Return</label>
+            <input type="date" id="returnDate" name="returnDate">
+        </div>
+
+        <div class="passengerCount">
+            <label for="passengerCount">Passenger Count</label>
+            <input type="number" id="passengerCount" name="passengerCount" placeholder="Enter number of passengers">
+        </div>
+
+        <div class="filters">
+            <label for="filterOptions">Filters</label>
+            <select id="filterOptions" name="filterOptions">
+                <option value="" disabled selected></option>
+                <option value="lowestPrice">Lowest Price First</option>
+                <option value="noConnectingFlights">Do not allow connecting flight</option>
+            </select>
+        </div>
+
+        <button class="searchButton" id="searchButton">Search</button>
+
+    </div>
     </div>
     <script src="homepagedump.js"></script>
 </body>
+
 </html>

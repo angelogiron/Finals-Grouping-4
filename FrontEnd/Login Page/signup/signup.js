@@ -1,7 +1,6 @@
 document.getElementById("submit").addEventListener("click", signUpAccount);
 
-async function signUpAccount(event) 
-{
+async function signUpAccount(event) {
     event.preventDefault();
 
     const accountName = document.getElementById("name").value;
@@ -10,8 +9,8 @@ async function signUpAccount(event)
     const accountPassportDetails = document.getElementById("passport").value;
     const accountEmail = document.getElementById("email").value;
     const accountPassword = document.getElementById("password").value;
-    
-    const url = 'http://localhost:8080/signup'; 
+
+    const url = 'http://localhost:8080/signup';
     const options = {
         method: 'POST',
         headers: {
@@ -28,19 +27,17 @@ async function signUpAccount(event)
     };
 
     try {
-            const response = await fetch(url, options);
-            const result = await response.json();
-            console.log(result);
-        } catch (error) 
-        {
-            console.error(error);
-        }
-    
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+
     goToLogInPage();
 }
 
-async function goToLogInPage()
-{
+async function goToLogInPage() {
     window.location.href = "loginPage.html";
 }
 
