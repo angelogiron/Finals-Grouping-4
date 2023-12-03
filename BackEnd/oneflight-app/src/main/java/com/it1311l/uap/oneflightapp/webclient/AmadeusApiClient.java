@@ -19,7 +19,7 @@ public interface AmadeusApiClient {
 			+ "&departureDate={departureDate}"
 			+ "&returnDate={arrivalDate}"
 			+ "&adults={passengerCount}"
-			+ "&includedAirlineCodes={airlineCode}"
+			//+ "&includedAirlineCodes={airlineCode}"
 			+ "&nonStop=true")
 	public FlightOffersResponse getFlightOffers(@PathVariable String originLocationCode, @PathVariable String destinationLocation, @PathVariable String departureDate, @PathVariable String arrivalDate, @PathVariable int passengerCount, @PathVariable String airlineCode);
 }
