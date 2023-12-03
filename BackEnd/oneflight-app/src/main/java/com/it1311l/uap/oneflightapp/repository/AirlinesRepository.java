@@ -17,7 +17,7 @@ public interface AirlinesRepository {
 	@Select("SELECT DISTINCT airline_code FROM airline_location")
     public List<String> getAllAirlineCodes();
 
-    @Select("SELECT DISTINCT iata_code FROM airline_location")
+    @Select("SELECT DISTINCT iata_code FROM airline_location ORDER BY iata_code")
     public List<String> getAllLocations();
     
     @Update("TRUNCATE TABLE airline_location")
