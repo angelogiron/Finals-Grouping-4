@@ -1,5 +1,4 @@
-.box 
-{
+.box {
     position: absolute;
     right: 640px;
     top: 300px;
@@ -8,38 +7,33 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-form 
-{
+form {
     display: flex;
     flex-direction: column;
 }
 
-.row 
-{
+.row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-input 
-{
+input {
     padding: 8px;
     box-sizing: border-box;
 }
 
-h2
-{
+h2 {
     color: white;
     font-size: 1.3em;
     margin-right: 50px;
     margin-left: 10px;
 }
 
-.Apply
-{
+.Apply {
     color: #fff;
     font-size: 16px;
     padding: 12px 35px;

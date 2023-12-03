@@ -13,59 +13,58 @@ async function syncAirlines() {
     var twop = document.getElementById("2p");
     var jx = document.getElementById("jx");
 
-    if(br.checked == true){
+    if (br.checked == true) {
         airlines.push(document.getElementById("br").value);
     }
-    if(pr.checked == true){
+    if (pr.checked == true) {
         airlines.push(document.getElementById("pr").value);
     }
-    if(cx.checked == true){
+    if (cx.checked == true) {
         airlines.push(document.getElementById("cx").value);
     }
-    if(vn.checked == true){
+    if (vn.checked == true) {
         airlines.push(document.getElementById("vn").value);
     }
-    if(ke.checked == true){
+    if (ke.checked == true) {
         airlines.push(document.getElementById("ke").value);
     }
-    if(nh.checked == true){
+    if (nh.checked == true) {
         airlines.push(document.getElementById("nh").value);
     }
-    if(oz.checked == true){
+    if (oz.checked == true) {
         airlines.push(document.getElementById("oz").value);
     }
-    if(zp.checked == true){
+    if (zp.checked == true) {
         airlines.push(document.getElementById("zp").value);
     }
-    if(twop.checked == true){
+    if (twop.checked == true) {
         airlines.push(document.getElementById("2p").value);
     }
-    if(jx.checked == true){
+    if (jx.checked == true) {
         airlines.push(document.getElementById("jx").value);
     }
 
     const url = "http://localhost:8080/admin/airlines/delete"
-    const options = 
+    const options =
+    {
+        method: 'GET',
+        headers:
         {
-            method: 'GET',
-            headers: 
-            {
-                'Content-Type': 'application/json'
-            }
-        };
-        try {
-                const response = await fetch(url, options);
-                const result = await response.json();
-                console.log(result);
-            } 
-        catch (error) 
-            {
-                console.error(error);
-            }
+            'Content-Type': 'application/json'
+        }
+    };
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+    }
+    catch (error) {
+        console.error(error);
+    }
 
 
-    for(let i = 0; i < airlines.length; i++) {
-        const url = "http://localhost:8080/admin/airlines/sync/" + airlines[i]; 
+    for (let i = 0; i < airlines.length; i++) {
+        const url = "http://localhost:8080/admin/airlines/sync/" + airlines[i];
         const options = {
             method: 'GET',
             headers: {
@@ -73,13 +72,12 @@ async function syncAirlines() {
             }
         };
         try {
-                const response = await fetch(url, options);
-                const result = await response.json();
-                console.log(result);
-            } 
-        catch (error) 
-            {
-                console.error(error);
-            }
+            const response = await fetch(url, options);
+            const result = await response.json();
+            console.log(result);
         }
+        catch (error) {
+            console.error(error);
+        }
+    }
 }

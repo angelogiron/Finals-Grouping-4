@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: 0px;
-    
+
 }
 
 body::before {
@@ -17,7 +17,7 @@ body::before {
     background-image: url("https://c1.wallpaperflare.com/preview/875/692/943/aircraft-flight-airport-fly.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.2; 
+    opacity: 0.2;
     z-index: -1;
 }
 
@@ -25,7 +25,7 @@ body::before {
     background-color: #000000;
     overflow: hidden;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .menu ul {
@@ -75,7 +75,8 @@ body::before {
     text-align: center;
 }
 
-.apply-button, .sync-button {
+.apply-button,
+.sync-button {
     padding: 10px;
     background-color: #4caf50;
     color: #fff;
