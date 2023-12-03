@@ -44,6 +44,26 @@ async function syncAirlines() {
         airlines.push(document.getElementById("jx").value);
     }
 
+    const url = "http://localhost:8080/admin/airlines/delete"
+    const options = 
+        {
+            method: 'GET',
+            headers: 
+            {
+                'Content-Type': 'application/json'
+            }
+        };
+        try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                console.log(result);
+            } 
+        catch (error) 
+            {
+                console.error(error);
+            }
+
+
     for(let i = 0; i < airlines.length; i++) {
         const url = "http://localhost:8080/admin/airlines/sync/" + airlines[i]; 
         const options = {
