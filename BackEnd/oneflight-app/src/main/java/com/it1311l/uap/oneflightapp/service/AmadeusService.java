@@ -5,10 +5,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.it1311l.uap.oneflightapp.model.AirlineDetails;
 import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
 import com.it1311l.uap.oneflightapp.model.FlightOffers;
+import com.it1311l.uap.oneflightapp.model.FlightOffersRequest;
 import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 import com.it1311l.uap.oneflightapp.repository.AirlinesRepository;
 import com.it1311l.uap.oneflightapp.repository.FlightOffersRepository;
@@ -37,8 +39,9 @@ public class AmadeusService {
         }	
 		return response;
 	}
-	/*
-	public FlightOffersResponse getFlightOffers() {
-		
-	}*/
+	
+	public FlightOffersResponse flightOffers(String originLocationCode, String destinationLocation, String departureDate, String arrivalDate, int passengerCounts, String airlineCode) {
+		FlightOffersResponse response = amadeusApi.getFlightOffers(originLocationCode, destinationLocation, departureDate, arrivalDate, passengerCounts, airlineCode);
+		return response;
+	}
 }

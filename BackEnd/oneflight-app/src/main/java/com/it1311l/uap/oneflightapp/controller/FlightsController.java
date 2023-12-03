@@ -3,6 +3,8 @@ package com.it1311l.uap.oneflightapp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,13 +27,12 @@ public class FlightsController {
     
     @Autowired
     AmadeusService amadeusApi;
-    /*
-    @GetMapping("/flight-offers")
-    public FlightOffersResponse getFlightOffers(@PathVariable FlightOffersRequest request) {
-				return amadeusApi.getFlightOffers(); 
-   
+    
+    @PostMapping("/flight-offers")
+    public FlightOffersResponse getFlightOffers(@RequestBody FlightOffersRequest request) {
+				return amadeusApi.flightOffers(request.getOriginLocation(), request.getDestinationLocation(), request.getDepartureDate(), request.getArrivalDate(), request.getPassengerCount(), request.getAirlineCode()); 
     }
-*/
+
     @GetMapping("/airlineCodes")
     public List<String> getAvailableAirlineCodes() {
         return amadeusService.getAllAirlineCodes();

@@ -15,10 +15,10 @@ public interface AmadeusApiClient {
 	public AmadeusAirlineResponse getAirlineLocations(@PathVariable String airlineCode);
 	
 	@GetExchange("/shopping/flight-offers?originLocationCode={originLocationCode}"
-			+ "&destinationLocationCode={destinationLocationCode}"
+			+ "&destinationLocationCode={destinationLocation}"
 			+ "&departureDate={departureDate}"
-			+ "&returnDate={returnDate}}"
-			+ "&adults={adults}"
+			+ "&returnDate={arrivalDate}"
+			+ "&adults={passengerCount}"
 			+ "&includedAirlineCodes={airlineCode}")
-	public FlightOffersResponse getFlightOffers(@PathVariable FlightOffersRequest request);
+	public FlightOffersResponse getFlightOffers(@PathVariable String originLocationCode, @PathVariable String destinationLocation, @PathVariable String departureDate, @PathVariable String arrivalDate, @PathVariable int passengerCount, @PathVariable String airlineCode);
 }

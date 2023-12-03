@@ -1,19 +1,13 @@
 package com.it1311l.uap.oneflightapp.model;
 
 public class FlightOffersRequest {
-	private int travelType;
 	private String airlineCode;
 	private String originLocation;
 	private String destinationLocation;
 	private String departureDate;
 	private String arrivalDate;
 	private int passengerCount;
-	public int getTravelType() {
-		return travelType;
-	}
-	public void setTravelType(int travelType) {
-		this.travelType = travelType;
-	}
+	
 	public String getAirlineCode() {
 		return airlineCode;
 	}
