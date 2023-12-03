@@ -1,13 +1,11 @@
-body 
-{
+body {
     background-image: linear-gradient(135deg, #FFFFFF 10%, #4CAF50 100%);
     background-attachment: fixed;
     font-family: "Open Sans", sans-serif;
     color: #333333;
 }
 
-.box-form 
-{
+.box-form {
     margin: 0 auto;
     width: 70%;
     background: #FFFFFF;
@@ -15,51 +13,44 @@ body
     overflow: hidden;
     display: flex;
 }
-  
-.box-form .left 
-{
+
+.box-form .left {
     color: #FFFFFF;
     background-size: cover;
     background-image: url("https://c1.wallpaperflare.com/preview/875/692/943/aircraft-flight-airport-fly.jpg");
     overflow: hidden;
 }
-  
-.box-form .left .overlay 
-{
+
+.box-form .left .overlay {
     padding: 30px;
     width: 100%;
     height: 100%;
     background: rgba(76, 175, 80, 0.678);
     overflow: hidden;
 }
-  
-.box-form .left .overlay h1
-{
+
+.box-form .left .overlay h1 {
     font-size: 160px;
     font-weight: 850;
     margin-top: 160px;
 }
-  
-.box-form .right
-{
+
+.box-form .right {
     padding: 40px;
     overflow: hidden;
 }
-  
-.box-form .right h5
-{
+
+.box-form .right h5 {
     font-size: 150px;
     line-height: 0;
 }
-  
-.box-form .right p
-{
+
+.box-form .right p {
     font-size: 14px;
     color: #B0B3B9;
 }
-  
-.box-form .right input 
-{
+
+.box-form .right input {
     width: 100%;
     padding: 10px;
     margin-top: 50px;
@@ -68,9 +59,8 @@ body
     outline: none;
     border-bottom: 2px solid #B0B3B9;
 }
-  
-.box-form .right .login-button
-{
+
+.box-form .right .login-button {
     float: right;
     color: #fff;
     font-size: 16px;
