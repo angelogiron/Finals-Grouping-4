@@ -32,13 +32,21 @@ async function login(event)
         console.error(error);
     }
 
-    if(result = "success")
+    if(result = "guest")
     {
         goToHomePage();
+    }
+    else{
+        
     }
 }
 
 async function goToHomePage()
 {
     window.location.href = "../../Home Page/homepagedump.html";
+}
+
+async function goToAdminPage()
+{
+    window.location.href ="../../Maintenance Pages/useradministrationpage/useradministrationpage.html"
 }

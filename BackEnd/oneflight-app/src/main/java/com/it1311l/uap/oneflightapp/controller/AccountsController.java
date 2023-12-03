@@ -28,7 +28,7 @@ public class AccountsController
 	    Account storedAccount = accountsRepository.findByEmail(loginRequest.getAccountEmail());
 	    
 	    if (storedAccount != null && storedAccount.getAccountPassword().equals(loginRequest.getAccountPassword())) {
-	        return "success";
+	        return storedAccount.getRole();
 	    } 
 	    
 	    else {
