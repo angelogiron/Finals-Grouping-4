@@ -2,12 +2,12 @@ package com.it1311l.uap.oneflightapp.repository;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
-import com.it1311l.uap.oneflightapp.model.AirlineDetails;
-import com.it1311l.uap.oneflightapp.model.AmadeusAirlineResponse;
 
 @Mapper
 public interface AirlinesRepository {
@@ -19,4 +19,7 @@ public interface AirlinesRepository {
 
     @Select("SELECT DISTINCT iata_code FROM airline_location")
     public List<String> getAllLocations();
+    
+    @Update("TRUNCATE TABLE airline_location")
+    public void truncateAirlineLocations();
 }
