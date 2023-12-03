@@ -14,7 +14,7 @@ public class AmadeusApiConfig {
 	@Bean
 	AmadeusApiClient amadeusApi() {
 		WebClient webClient = WebClient.builder()
-				.baseUrl("https://test.api.amadeus.com/v1/")
+				.baseUrl("https://test.api.amadeus.com/v2/")
 		.defaultHeader("Authorization", "Bearer " + "RiMsuCufjh6hGyeGAyJNv0YuT360")
 				.build();
 		

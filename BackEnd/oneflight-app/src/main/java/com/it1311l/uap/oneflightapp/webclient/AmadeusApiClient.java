@@ -11,10 +11,10 @@ import com.it1311l.uap.oneflightapp.model.FlightOffersResponse;
 @HttpExchange
 public interface AmadeusApiClient {
 
-	@GetExchange("airline/destinations?airlineCode={airlineCode}")
+	@GetExchange("v1/airline/destinations?airlineCode={airlineCode}")
 	public AmadeusAirlineResponse getAirlineLocations(@PathVariable String airlineCode);
 	
-	@GetExchange("/shopping/flight-offers?originLocationCode={originLocationCode}"
+	@GetExchange("v2/shopping/flight-offers?originLocationCode={originLocationCode}"
 			+ "&destinationLocationCode={destinationLocation}"
 			+ "&departureDate={departureDate}"
 			+ "&returnDate={arrivalDate}"
