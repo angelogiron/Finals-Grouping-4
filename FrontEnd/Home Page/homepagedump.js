@@ -68,7 +68,6 @@ async function populateDropdowns() {
 
 }
 
-var searchButton = document.getElementById("searchButton").addEventListener("click", getFlightOffers);
 
 async function getFlightOffers(event) {
     event.preventDefault();
@@ -121,7 +120,6 @@ searchButton.addEventListener('click', function (event) {
     userInput["Destination"] = document.getElementById("destinationDropdown").value;
     userInput["Depart Date"] = document.getElementById("departDate").value;
     userInput["Return Date"] = document.getElementById("returnDate").value;
-
 
     userInputArray.push(userInput);
     createNewSearchBox();
