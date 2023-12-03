@@ -35,4 +35,21 @@ public class AccountsController
 	        return loginRequest.getAccountEmail();
 	    }
 	}
-}
+	
+	@PostMapping("/admin/change-role-to-admin")
+	public String changeRoleToAdmin(@RequestBody Account changeRoleRequest) {
+		accountsRepository.changeToAdmin(changeRoleRequest.getAccountEmail());
+		return "success";
+	}
+	
+	@PostMapping("/admin/change-role-to-admin")
+	public String changeRoleToGuest(@RequestBody Account changeRoleRequest) {
+		accountsRepository.changeToGuest(changeRoleRequest.getAccountEmail());
+		return "success";
+	}
+	
+	@GetMapping("/admin/get-emails")
+	public void getEmails() {
+		accountsRepository.getEmail();
+	}
+	}
